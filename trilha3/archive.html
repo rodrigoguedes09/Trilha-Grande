@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trilha Grande</title>
+	<link rel="icon" href="img/banner/Fevicon.png" type="image/png">
+
+  <link rel="stylesheet" href="vendors/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="vendors/themify-icons/themify-icons.css">
+  <link rel="stylesheet" href="vendors/linericon/style.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.theme.default.min.css">
+  <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!--================Header Menu Area =================-->
+  <header class="header_area">
+    <div class="main_menu">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container box_1620">
+
+          <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+            <ul class="nav navbar-nav menu_nav justify-content-center">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
+              <li class="nav-item"><a class="nav-link" href="archive.html">Trilhas</a></li> 
+              <li class="nav-item"><a class="nav-link" href="category.html">Grupos</a>
+              <li class="nav-item submenu dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                  aria-expanded="false">Sobre</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a class="nav-link" href="blog-details.html">O Projeto</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contato</a></li>
+            </ul>
+          </div> 
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <!--================Banner =================-->  
+    <section class="mb-30px">
+        <div class="hero-banner">
+          <div class="hero-banner__content">
+            <h1>Trilhas Disponíveis</h1>
+            <h4>Encontre a trilha perfeita para você</h4>
+          </div>
+        </div>
+    </section>
+  <!--================ Banner end =================-->    
+
+  <!--================ Principal =================-->
+  <section class="blog-post-area section-margin">
+    <div class="container">
+      <div class="d-none d-sm-block mb-5 pb-4">
+        <div id="map" style="height: 420px;"></div>
+        <script>
+          function initMap() {
+            var uluru = {lat: -29.187557, lng: -50.053671};
+            var malacara = {lat: -29.156293, lng: -50.060100};
+            var indio = {lat: -29.176784, lng: -50.027302};
+            var pedra = {lat: -29.270730, lng: -50.114527};
+            var boi = {lat: -29.202430, lng: -50.042656};
+            var cotovelo = {lat: -29.169103, lng: -50.098122};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              center: uluru,
+              zoom: 11,
+              scrollwheel: false
+            });
+  
+            // Array para armazenar os marcadores
+            var markers = [];
+  
+            // Adicionar marcador
+            markers.push(new google.maps.Marker({
+              position: malacara,
+              map: map,
+              title: 'Malacara'
+
+            }));
+  
+            markers.push(new google.maps.Marker({
+              position: pedra,
+              map: map,
+              title: 'Pedra Branca'
+            }));
+  
+            markers.push(new google.maps.Marker({
+              position: indio,
+              map: map,
+              title: 'Índios Coroados'
+            }));
+  
+            markers.push(new google.maps.Marker({
+              position: boi,
+              map: map,
+              title: 'Rio do Boi'
+
+            }));
+  
+            markers.push(new google.maps.Marker({
+              position: cotovelo,
+              map: map,
+              title: 'Cotovelo'
+
+            }));
+  
+
+            markers.forEach(function(marker) {
+              marker.addListener('click', function() {
+                map.setZoom(16);
+                map.setCenter(marker.getPosition());
+              });
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAktxfpWXV-79rQ31eMXUVWlJin3d6BNb4&callback=initMap"></script>
+        
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-md-5 p-10">
+              <div class="single-recent-blog-post card-view mx-auto">
+                <div class="thumb">
+                  <img class="card-img rounded-0" src="img/blog/thumb/riodoboi.jpeg" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="details mt-20">
+                  <a href="riodoboi.html">
+                    <h3>Trilha do Rio do Boi</h3>
+                  </a>
+                  <p>Permite a visitação do canyon Itaimbezinho pela parte interna, entre as paredes. Certamente é uma das trilhas de ecoturismo mais singulares e impressionantes do país.</p>
+                  <a class="button" href="riodoboi.html">Conheça<i class="ti-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="single-recent-blog-post card-view">
+                <div class="thumb">
+                  <img class="card-img rounded-0" src="img/blog/malacara1.jpg" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="details mt-20">
+                  <a href="malacara.html">
+                    <h3>Trilha do Malacara</h3>
+                  </a>
+                  <p>O Cânion Malacara se localiza na área do Parque Nacional da Serra Geral, sendo que esta trilha é realizada por baixo (dentro do cânion), onde se descortina belas paisagens com a vista das paredes rochosas ao fundo</p>
+                  <a class="button" href="malacara.html">Conheça<i class="ti-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="single-recent-blog-post card-view">
+                <div class="thumb">
+                  <img class="card-img rounded-0" src="img/blog/pedrabranca.jpg" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="details mt-20">
+                  <a href="pedrabranca.html">
+                    <h3>Trilha do Vale da Pedra Branca</h3>
+                  </a>
+                  <p>Um verdadeiro refúgio, cercado por montanhas, cortadas por vários rios, onde nasce o rio Mampituba que faz divisa do estado de Santa Catarina e Rio Grande do Sul. </p>
+                  <a class="button" href="pedrabranca.html">Conheça<i class="ti-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="single-recent-blog-post card-view">
+                <div class="thumb">
+                  <img class="card-img rounded-0" src="img/blog/indios.jpg" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="details mt-20">
+                  <a href="indios.html">
+                    <h3>Trilha dos Índios Coroados</h3>
+                  </a>
+                  <p>O Canyon dos Índios Coroados é um belíssimo Canyon que se forma no final da subida da Serra do Faxinal com 1,5 km de extensão e 700 metros de profundidade encanta a todos que o contempla.</p>
+                  <a class="button" href="indios.html">Conheça<i class="ti-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="single-recent-blog-post card-view">
+                <div class="thumb">
+                  <img class="card-img rounded-0" src="img/blog/cotovelo.jpg" alt="" style="width: 100%; height: 200px; object-fit: cover;">
+                </div>
+                <div class="details mt-20">
+                  <a href="cotovelo.html">
+                    <h3>Trilha do Rio do Cotovelo</h3>
+                  </a>
+                  <p>A Trilha do Cotovelo em Praia Grande, SC, oferece uma jornada única em meio à natureza exuberante, com percursos sinuosos e panorâmicas deslumbrantes. Ideal para amantes de aventuras, a trilha proporciona uma experiência marcante através de paisagens cênicas e desafios naturais.</p>
+                  <a class="button" href="cotovelo.html">Conheça<i class="ti-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+  </section>
+
+  <!--================  Footer =================-->
+  <footer class="footer-area section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Sobre nós</h6>
+            <p>
+              A TRILHA GRANDE é uma iniciativa para aumentar o turismo na região de Praia Grande (Santa Catarina), realizada por alunos da UFSC.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4  col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Newsletter</h6>
+            <p>Receba novidades</p>
+            <div class="" id="mc_embed_signup">
+
+              <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                method="get" class="form-inline">
+
+                <div class="d-flex flex-row">
+
+                  <input class="form-control" name="EMAIL" placeholder="Enter Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '"
+                    required="" type="email">
+
+
+                  <button class="click-btn btn btn-default"><span class="lnr lnr-arrow-right"></span></button>
+                  <div style="position: absolute; left: -5000px;">
+                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+                  </div>
+
+                </div>
+                <div class="info"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3  col-md-6 col-sm-6">
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-6">
+          <div class="single-footer-widget">
+            <h6>Siga a gente</h6>
+            <p>Redes Sociais</p>
+            <div class="footer-social d-flex align-items-center">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--================ End Footer =================-->
+
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script src="vendors/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="js/jquery.ajaxchimp.min.js"></script>
+  <script src="js/mail-script.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
